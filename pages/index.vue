@@ -40,9 +40,9 @@ const initLoading = ref(false)
 
 onMounted(() => {
   initLoading.value = true
-  if (route.query.redirect) {
+  if (route.query.url) {
     setTimeout(() => {
-      window.location.href = route.query.redirect
+      window.location.href = route.query.url
     }, 1000)
     setTimeout(() => {
       initLoading.value = false
